@@ -66,6 +66,15 @@
 /obj/item/tank/ui_action_click(mob/user)
 	toggle_internals(user)
 
+/obj/item/tank/proc/get_relabel_list()
+	var/static/list/relabel_list = list(
+		"o2" = /obj/item/tank/internals/oxygen,
+		"o2 but red" = /obj/item/tank/internals/oxygen/red,
+		"o2 but yellow?" = /obj/item/tank/internals/oxygen/yellow,
+		"funnygas" = /obj/item/tank/internals/anesthetic
+	)
+	return relabel_list
+
 /obj/item/tank/Initialize(mapload)
 	. = ..()
 
@@ -181,6 +190,16 @@
 	if(..())
 		return
 	switch(action)
+		if("relabel")
+			var/label = input("New canister label:", name) as null|anything in sort_list(get_relabel_list())
+			if(label && !..())
+				var/newtype = get_relabel_list()[label]
+				if(newtype)
+					var/obj/machinery/portable_atmospherics/canister/replacement = newtype
+					name = initial(replacement.name)
+					desc = initial(replacement.desc)
+					icon_state = initial(replacement.icon_state)
+					set_greyscale(initial(replacement.greyscale_colors), initial(replacement.greyscale_config))
 		if("pressure")
 			var/pressure = params["pressure"]
 			if(pressure == "reset")

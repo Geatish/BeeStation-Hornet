@@ -62,6 +62,7 @@ export const Tank = (props, context) => {
                   })
                 }
               />
+              <Button icon="pencil-alt" content="Relabel" onClick={() => act('relabel')} />
             </LabeledList.Item>
           </LabeledList>
         </Section>
