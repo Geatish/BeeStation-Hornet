@@ -10723,6 +10723,7 @@
 	dir = 8
 	},
 /obj/effect/landmark/start/assistant,
+/turf/open/floor/iron,
 /area/hallway/secondary/entry)
 "bnv" = (
 /turf/closed/wall,
@@ -11040,6 +11041,7 @@
 /obj/item/reagent_containers/food/drinks/britcup{
 	desc = "Kingston's personal cup."
 	},
+/turf/open/floor/iron,
 /area/hallway/secondary/entry)
 "bpv" = (
 /obj/structure/flora/junglebush,
@@ -21550,6 +21552,7 @@
 /obj/item/folder,
 /obj/item/pen,
 /obj/machinery/light/small,
+/turf/open/floor/iron,
 /area/hallway/secondary/entry)
 "dEN" = (
 /obj/machinery/ai_slipper{
@@ -44907,6 +44910,7 @@
 /obj/item/pen,
 /obj/machinery/door/firedoor,
 /obj/effect/turf_decal/tile/yellow/fourcorners/contrasted,
+/turf/open/floor/iron,
 /area/medical/chemistry)
 "qrw" = (
 /obj/machinery/disposal/deliveryChute{
@@ -55550,6 +55554,7 @@
 /obj/structure/desk_bell{
 	pixel_x = -8
 	},
+/turf/open/floor/iron,
 /area/medical/chemistry)
 "wJl" = (
 /obj/machinery/door/airlock/engineering/glass{
