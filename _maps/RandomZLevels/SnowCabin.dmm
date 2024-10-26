@@ -297,7 +297,7 @@
 	},
 /obj/structure/janitorialcart,
 /obj/item/mop,
-/obj/item/reagent_containers/glass/bucket,
+/obj/item/reagent_containers/cup/bucket,
 /obj/item/caution,
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plating,
@@ -319,7 +319,7 @@
 /turf/open/floor/plating,
 /area/awaymission/cabin)
 "aV" = (
-/obj/machinery/space_heater,
+/obj/machinery/portable_thermomachine,
 /turf/open/floor/wood,
 /area/awaymission/cabin)
 "aW" = (
@@ -353,7 +353,7 @@
 /area/awaymission/cabin)
 "bc" = (
 /obj/structure/table/wood,
-/obj/item/reagent_containers/food/drinks/britcup,
+/obj/item/reagent_containers/cup/glass/britcup,
 /turf/open/floor/carpet,
 /area/awaymission/cabin)
 "bd" = (
@@ -375,7 +375,7 @@
 /area/awaymission/cabin)
 "bg" = (
 /obj/machinery/door/window/westleft{
-	name = "manager's desk"
+	name = "Manager's Desk"
 	},
 /turf/open/floor/carpet,
 /area/awaymission/cabin)
@@ -604,7 +604,7 @@
 /area/awaymission/cabin)
 "bU" = (
 /obj/structure/table/wood/fancy,
-/obj/item/reagent_containers/food/drinks/shaker,
+/obj/item/reagent_containers/cup/glass/shaker,
 /turf/open/floor/wood,
 /area/awaymission/cabin)
 "bV" = (
@@ -883,25 +883,25 @@
 /area/awaymission/cabin)
 "cJ" = (
 /obj/structure/table,
-/obj/item/reagent_containers/food/condiment/peppermill{
+/obj/item/reagent_containers/condiment/peppermill{
 	pixel_x = 8;
 	pixel_y = 10
 	},
-/obj/item/reagent_containers/food/condiment/peppermill{
+/obj/item/reagent_containers/condiment/peppermill{
 	pixel_x = 8
 	},
-/obj/item/reagent_containers/food/condiment/saltshaker{
+/obj/item/reagent_containers/condiment/saltshaker{
 	pixel_x = -8;
 	pixel_y = 10
 	},
-/obj/item/reagent_containers/food/condiment/saltshaker{
+/obj/item/reagent_containers/condiment/saltshaker{
 	pixel_x = -8
 	},
 /turf/open/floor/iron/cafeteria,
 /area/awaymission/cabin)
 "cK" = (
 /obj/structure/table/wood/fancy,
-/obj/item/reagent_containers/food/drinks/sillycup/smallcarton{
+/obj/item/reagent_containers/cup/glass/sillycup/smallcarton{
 	pixel_y = 4
 	},
 /turf/open/floor/wood,
@@ -992,7 +992,7 @@
 	dir = 1
 	},
 /obj/structure/table/reinforced,
-/obj/item/reagent_containers/food/drinks/bottle/vodka/badminka{
+/obj/item/reagent_containers/cup/glass/bottle/vodka/badminka{
 	desc = "A fancy bottle of vodka. The name isn't in Galactic Common though.";
 	name = "Porosha Vodka"
 	},
@@ -1099,7 +1099,7 @@
 /area/awaymission/cabin)
 "dt" = (
 /obj/structure/closet/secure_closet/freezer/fridge/open,
-/obj/item/reagent_containers/food/condiment/mayonnaise,
+/obj/item/reagent_containers/condiment/mayonnaise,
 /turf/open/floor/iron/freezer,
 /area/awaymission/cabin)
 "du" = (
@@ -1360,11 +1360,11 @@
 /area/awaymission/cabin)
 "eo" = (
 /obj/structure/table/wood,
-/obj/item/reagent_containers/food/drinks/mug/cocoa{
+/obj/item/reagent_containers/cup/glass/mug/cocoa{
 	desc = "Still hot!";
 	pixel_y = -2
 	},
-/obj/item/reagent_containers/food/drinks/mug/cocoa{
+/obj/item/reagent_containers/cup/glass/mug/cocoa{
 	desc = "Still hot!";
 	pixel_x = 8;
 	pixel_y = 8
@@ -1381,7 +1381,7 @@
 "eq" = (
 /obj/machinery/door/poddoor/shutters{
 	id = "garage_cabin";
-	name = "garage door"
+	name = "Garage Door"
 	},
 /obj/structure/fans/tiny,
 /turf/open/floor/plating/snowed/temperatre,
@@ -1410,7 +1410,7 @@
 /area/awaymission/cabin)
 "ev" = (
 /obj/structure/table/wood/fancy,
-/obj/item/reagent_containers/glass/rag,
+/obj/item/reagent_containers/cup/rag,
 /turf/open/floor/wood,
 /area/awaymission/cabin)
 "ew" = (
@@ -1715,7 +1715,6 @@
 	desc = "It is a ghostly cat.";
 	icon = 'icons/mob/mob.dmi';
 	icon_state = "catghost";
-	layer = 3;
 	max_integrity = 66666;
 	name = "Cat"
 	},
@@ -1861,11 +1860,7 @@
 	},
 /area/awaymission/cabin/caves/mountain)
 "fZ" = (
-/obj/structure/grille,
-/obj/structure/window/reinforced/fulltile{
-	desc = "Enjoy the view.";
-	name = "window"
-	},
+/obj/effect/spawner/structure/window/reinforced,
 /turf/open/floor/plating,
 /area/awaymission/cabin/caves/mountain)
 "gb" = (
@@ -2047,7 +2042,7 @@
 "gN" = (
 /obj/machinery/light,
 /obj/effect/decal/cleanable/dirt,
-/obj/machinery/space_heater,
+/obj/machinery/portable_thermomachine,
 /turf/open/floor/plating,
 /area/awaymission/cabin)
 "gO" = (
@@ -2178,18 +2173,17 @@
 /turf/open/floor/wood,
 /area/awaymission/cabin)
 "hf" = (
-/obj/machinery/space_heater,
+/obj/machinery/portable_thermomachine,
 /obj/effect/decal/remains/robot,
 /obj/structure/sign/warning/fire{
 	pixel_y = 32
 	},
-/obj/machinery/space_heater,
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plating,
 /area/awaymission/cabin)
 "hg" = (
 /obj/machinery/door/airlock/maintenance{
-	name = "janitor closet"
+	name = "Janitor Closet"
 	},
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plating,
@@ -2299,7 +2293,7 @@
 /area/awaymission/cabin)
 "hy" = (
 /obj/machinery/door/airlock/maintenance{
-	name = "heater storage"
+	name = "Heater Storage"
 	},
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plating,
@@ -2347,7 +2341,7 @@
 /area/awaymission/cabin)
 "hF" = (
 /obj/structure/table/wood,
-/obj/item/reagent_containers/food/drinks/mug/cocoa{
+/obj/item/reagent_containers/cup/glass/mug/cocoa{
 	desc = "Still hot!";
 	pixel_y = 2
 	},
@@ -2413,7 +2407,7 @@
 /turf/open/floor/plating/snowed,
 /area/awaymission/cabin/caves)
 "hQ" = (
-/obj/item/reagent_containers/food/drinks/beer,
+/obj/item/reagent_containers/cup/glass/bottle/beer,
 /turf/open/floor/plating/snowed,
 /area/awaymission/cabin/caves)
 "hR" = (
@@ -2458,14 +2452,12 @@
 /obj/item/claymore/weak/ceremonial{
 	desc = "Brought to you by the guys in charge of making replica katana toys!";
 	force = 1;
-	layer = 3.01;
 	name = "replica claymore";
 	pixel_x = 5;
 	pixel_y = 8;
 	throwforce = 2
 	},
 /obj/item/shield/riot/roman/fake{
-	layer = 3.01;
 	pixel_x = -7
 	},
 /turf/open/floor/plating/asteroid/snow,
@@ -2572,7 +2564,7 @@
 	},
 /area/awaymission/cabin/caves/sovietcave)
 "il" = (
-/obj/item/toy/prize/deathripley{
+/obj/item/toy/mecha/deathripley{
 	desc = "The mining mecha of the exploration team.";
 	name = "exploraton squad Ripley";
 	pixel_y = 15
@@ -2620,7 +2612,7 @@
 /area/awaymission/cabin/caves/sovietcave)
 "is" = (
 /obj/structure/closet/secure_closet/freezer/kitchen,
-/obj/item/reagent_containers/food/condiment/enzyme,
+/obj/item/reagent_containers/condiment/enzyme,
 /turf/open/floor/iron/freezer,
 /area/awaymission/cabin)
 "it" = (
@@ -2718,7 +2710,7 @@
 /area/awaymission/cabin/caves)
 "iR" = (
 /obj/structure/table/wood,
-/obj/item/reagent_containers/food/drinks/mug/cocoa{
+/obj/item/reagent_containers/cup/glass/mug/cocoa{
 	desc = "Still hot!";
 	pixel_x = -7;
 	pixel_y = -2
@@ -2727,7 +2719,7 @@
 /area/awaymission/cabin)
 "iS" = (
 /obj/structure/table/wood,
-/obj/item/reagent_containers/food/drinks/mug/cocoa{
+/obj/item/reagent_containers/cup/glass/mug/cocoa{
 	desc = "Still hot!";
 	pixel_x = 7;
 	pixel_y = 2
@@ -2736,7 +2728,7 @@
 /area/awaymission/cabin)
 "iT" = (
 /obj/structure/table/wood,
-/obj/item/reagent_containers/food/drinks/mug/cocoa{
+/obj/item/reagent_containers/cup/glass/mug/cocoa{
 	desc = "Still hot!";
 	pixel_x = -4;
 	pixel_y = 4
@@ -2745,12 +2737,12 @@
 /area/awaymission/cabin)
 "iU" = (
 /obj/structure/table/wood,
-/obj/item/reagent_containers/food/drinks/mug/cocoa{
+/obj/item/reagent_containers/cup/glass/mug/cocoa{
 	desc = "Still hot!";
 	pixel_x = -5;
 	pixel_y = 2
 	},
-/obj/item/reagent_containers/food/drinks/mug/cocoa{
+/obj/item/reagent_containers/cup/glass/mug/cocoa{
 	desc = "Still hot!";
 	pixel_x = 7;
 	pixel_y = -2
@@ -3011,14 +3003,14 @@
 /area/awaymission/cabin)
 "jy" = (
 /obj/structure/table/wood/fancy,
-/obj/item/reagent_containers/food/drinks/bottle/wine{
+/obj/item/reagent_containers/cup/glass/bottle/wine{
 	pixel_y = 4
 	},
-/obj/item/reagent_containers/food/drinks/drinkingglass{
+/obj/item/reagent_containers/cup/glass/drinkingglass{
 	pixel_x = -7;
 	pixel_y = 3
 	},
-/obj/item/reagent_containers/food/drinks/drinkingglass{
+/obj/item/reagent_containers/cup/glass/drinkingglass{
 	pixel_x = 7;
 	pixel_y = 3
 	},
@@ -3096,7 +3088,7 @@
 /turf/open/floor/wood/cold,
 /area/awaymission/cabin/lumbermill)
 "jM" = (
-/obj/machinery/space_heater,
+/obj/machinery/portable_thermomachine,
 /turf/open/floor/wood/cold,
 /area/awaymission/cabin/lumbermill)
 "jN" = (
@@ -3346,9 +3338,7 @@
 	pixel_x = -1;
 	pixel_y = 13
 	},
-/obj/item/staff{
-	layer = 3.01
-	},
+/obj/item/staff,
 /turf/open/floor/plating/asteroid/snow,
 /area/awaymission/cabin/caves)
 "kB" = (
@@ -3363,7 +3353,6 @@
 /obj/item/gun/magic/wand{
 	desc = "It's just a fancy staff so that holy clerics and priests look cool. What? You didn't think someone would leave a REAL magic artifact with a snowman out in the cold, did you?";
 	icon_state = "revivewand";
-	layer = 3.01;
 	name = "holy staff";
 	pixel_y = -2
 	},
@@ -3479,7 +3468,7 @@
 "kK" = (
 /obj/effect/decal/cleanable/dirt/dust,
 /obj/structure/table/reinforced,
-/obj/item/reagent_containers/food/drinks/bottle/vodka,
+/obj/item/reagent_containers/cup/glass/bottle/vodka,
 /turf/open/floor/mineral/plastitanium/red{
 	name = "soviet floor"
 	},
@@ -4843,7 +4832,7 @@
 /area/awaymission/cabin/caves/mountain)
 "zP" = (
 /obj/effect/decal/cleanable/blood/old,
-/obj/item/knife/carrotshiv,
+/obj/item/knife/shiv/carrot,
 /obj/effect/decal/cleanable/glitter/blue{
 	desc = "It looks like fancy glitter to me.";
 	name = "icy wind"

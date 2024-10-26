@@ -172,7 +172,10 @@
 						"<span class='notice'>You pry [cell] out of [src].</span>")
 		cell = null
 	else if(is_wire_tool(I) && open)
-		return attack_hand(user)
+		if (user.a_intent == INTENT_HELP)
+			return interact(user)
+		else
+			return ..()
 	else if(load && ismob(load))  // chance to knock off rider
 		if(prob(1 + I.force * 2))
 			unload(0)
@@ -216,9 +219,9 @@
 			qdel(src)
 		if(2)
 			for(var/i = 1; i < 3; i++)
-				wires.cut_random()
+				wires.cut_random(null)
 		if(3)
-			wires.cut_random()
+			wires.cut_random(null)
 
 
 /mob/living/simple_animal/bot/mulebot/bullet_act(obj/projectile/Proj)
@@ -228,7 +231,7 @@
 			unload(0)
 		if(prob(25))
 			visible_message("<span class='danger'>Something shorts out inside [src]!</span>")
-			wires.cut_random()
+			wires.cut_random(null)
 
 /mob/living/simple_animal/bot/mulebot/interact(mob/user)
 	if(open && !isAI(user))

@@ -14,10 +14,12 @@
 
 MAPPING_DIRECTIONAL_HELPERS(/obj/structure/mirror, 28)
 
+CREATION_TEST_IGNORE_SUBTYPES(/obj/structure/mirror)
+
 /obj/structure/mirror/Initialize(mapload, dir, building)
 	. = ..()
 	if(icon_state == "mirror_broke" && !broken)
-		obj_break(null, mapload)
+		atom_break(null, mapload)
 
 /obj/structure/mirror/attack_hand(mob/user)
 	. = ..()
@@ -55,7 +57,7 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/structure/mirror, 28)
 		return list()// no message spam
 	return ..()
 
-/obj/structure/mirror/obj_break(damage_flag, mapload)
+/obj/structure/mirror/atom_break(damage_flag, mapload)
 	. = ..()
 	if(broken || (flags_1 & NODECONSTRUCT_1))
 		return
@@ -269,7 +271,7 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/structure/mirror, 28)
 			var/new_angle_s = P.Angle + 180
 			while(new_angle_s > 180)	// Translate to regular projectile degrees
 				new_angle_s -= 360
-			P.setAngle(new_angle_s)
+			P.set_angle(new_angle_s)
 
 	return BULLET_ACT_FORCE_PIERCE // complete projectile permutation
 

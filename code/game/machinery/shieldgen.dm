@@ -115,11 +115,8 @@
 
 
 /obj/machinery/shieldgen/deconstruct(disassembled = TRUE)
-	if(!(flags_1 & NODECONSTRUCT_1))
-		if(!(machine_stat && BROKEN))
-			set_machine_stat(machine_stat | BROKEN)
-			locked = pick(0,1)
-			update_icon()
+	atom_break()
+	locked = pick(0,1)
 
 /obj/machinery/shieldgen/interact(mob/user)
 	. = ..()
@@ -165,7 +162,7 @@
 			if(coil.get_amount() < 1)
 				return
 			coil.use(1)
-			obj_integrity = max_integrity
+			atom_integrity = max_integrity
 			set_machine_stat(machine_stat & ~BROKEN)
 			to_chat(user, "<span class='notice'>You repair \the [src].</span>")
 			update_icon()
@@ -212,6 +209,7 @@
 
 #define ACTIVE_SETUPFIELDS 1
 #define ACTIVE_HASFIELDS 2
+
 /obj/machinery/shieldwallgen
 	name = "shield wall generator"
 	desc = "A shield generator."
@@ -402,6 +400,9 @@
 	playsound(src, "sparks", 100, 1)
 	to_chat(user, "<span class='warning'>You short out the access controller.</span>")
 
+#undef ACTIVE_SETUPFIELDS
+#undef ACTIVE_HASFIELDS
+
 //////////////Containment Field START
 /obj/machinery/shieldwall
 	name = "shield wall"
@@ -415,6 +416,8 @@
 	var/needs_power = FALSE
 	var/obj/machinery/shieldwallgen/gen_primary
 	var/obj/machinery/shieldwallgen/gen_secondary
+
+CREATION_TEST_IGNORE_SUBTYPES(/obj/machinery/shieldwall)
 
 /obj/machinery/shieldwall/Initialize(mapload, obj/machinery/shieldwallgen/first_gen, obj/machinery/shieldwallgen/second_gen)
 	. = ..()
