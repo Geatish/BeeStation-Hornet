@@ -46,6 +46,11 @@ map flandstation
 	votable
 endmap
 
+map pubbystation
+	maxplayers 50
+	votable
+endmap
+
 map radstation
 	minplayers 20
 	votable
